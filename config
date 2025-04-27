@@ -1,0 +1,202 @@
+# Set mod key (Mod4=<Super>)
+set $mod Mod4
+
+# Set font and height.
+font pango:CaskaydiaCove Nerd Font Mono,CaskaydiaCove NFM:style=Bold 16
+
+##############
+#            #
+# AUTO EXECS #
+#            #
+##############
+
+# Set keyboard layout to <en-US> intl.
+# Maps <Right Alt> + , to write ç.
+# (See setxkbmap)
+exec --no-startup-id setxkbmap -layout us -variant intl
+
+# Set monitor 'DP=0' to 2560x1080@74.99hz
+# (See xrandr)
+exec --no-startup-id xrandr --output DP-0 --mode 2560x1080 --rate 74.99 --primary
+
+# Set mouse profile, disable Accel.
+# (See xinput)
+exec --no-startup-id xinput set-prop "HP, Inc HyperX Pulsefire Haste 2 Wireless" "libinput Accel Profile Enabled" 0 1 0
+
+# Disable X11 screensaver and power management.
+# (See xset)
+exec --no-startup-id xset s off && xset -dpms
+
+# Start pulseaudio and disable exit when inactive.
+# (See pulseaudio)
+exec --no-startup-id pulseaudio --daemonize=no --exit-idle-time=-1
+
+# Set default sink volume to 30%
+# (See pactl)
+exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ 30%
+
+###################
+#                 #
+# CUSTOM SETTINGS #
+#                 #
+###################
+
+# Configure border style.
+default_border pixel 1
+default_floating_border normal
+
+# Use Mouse+$mod to drag floating window.
+floating_modifier $mod
+
+# Center-allign the title of windows.
+title_align center
+
+# Prevent popups from appearing when a window is in fullscreen.
+popup_during_fullscreen smart
+
+# Set inner/outer gaps.
+gaps inner 5px
+gaps outer 5px
+
+###############
+#             #
+# KEYBINDINGS #
+#             #
+###############
+
+# Reload i3 configuration file.
+bindsym $mod+Shift+c reload
+
+# Restart i3 inplace.
+bindsym $mod+Shift+r restart
+
+# Toggle tilling / floating windows.
+bindsym $mod+v floating toggle
+
+# Kill focused window.
+bindsym $mod+c kill
+
+# Start dmenu.
+# (Program launcher)
+bindsym $mod+d exec --no-startup-id dmenu_run
+
+# Start alacritty.
+# (Terminal)
+bindsym $mod+q exec --no-startup-id alacritty
+
+# Start ranger.
+# (File manager)
+bindsym $mod+z exec --no-startup-id alacritty -e ranger
+
+# Start scrot.
+# (Screenshot)
+bindsym $mod+Shift+p --release exec --no-startup-id scrot -s
+
+# Increase the volume by 5%.
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
+
+# Lower the volume by 5%.
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
+
+# Mute/Unmute the volume.
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+# Change container layout to tabbed or split.
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# Change window focus.
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
+# Move focused window.
+bindsym $mod+u move left
+bindsym $mod+i move down
+bindsym $mod+o move up
+bindsym $mod+p move right
+
+# Change workspace names.
+set $ws1 "I"
+set $ws2 "II"
+set $ws3 "III"
+
+# Switch between workspaces.
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+
+# Move focused window to target workspace.
+bindsym $mod+Ctrl+1 move window to workspace $ws1
+bindsym $mod+Ctrl+2 move window to workspace $ws2
+bindsym $mod+Ctrl+3 move window to workspace $ws3
+
+################
+#              #
+# WINDOW RULES #
+# (See xprop)  #
+#              #
+################
+
+# Disable window title.
+for_window [class="^.*"] border pixel 2
+
+# Enable floating for alacritty, open at center.
+# (Terminal)
+for_window [class="Alacritty"] floating enable, move position center
+
+# Enable floating for pavucontrol, open at center.
+# (PulseAudio volume control)
+for_window [class="pavucontrol"] floating enable, move position center
+
+# Move steam to workspace 2.
+# (Game store)
+for_window [class="steam"] move to workspace $ws2
+
+# Move any steam game to workspace 3.
+for_window [class="steam_app_*"] move to workspace $ws3
+
+################
+#              #
+# THEME COLORS #
+#              #
+################
+
+# Class                 # Title # Background # Text  # Indicator # Border
+client.focused          #7287fd #eff1f5      #4c4f69 #dc8a78     #7287fd
+client.focused_inactive #9ca0b0 #eff1f5      #4c4f69 #dc8a78     #9ca0b0
+client.unfocused        #9ca0b0 #eff1f5      #4c4f69 #dc8a78     #9ca0b0
+client.urgent           #fe640b #eff1f5      #fe640b #9ca0b0     #fe640b
+client.placeholder      #9ca0b0 #eff1f5      #4c4f69 #9ca0b0     #9ca0b0
+client.background       #eff1f5
+
+# i3status bar.
+bar {
+  i3bar_command i3bar
+  # Disable tray icons.
+  tray_output none
+  # Runs i3status.
+  status_command i3status -c ~/.config/i3/i3status/config
+  # Move bar to top.
+  position top
+  # Enable workspace buttons.
+  workspace_buttons yes
+  # No padding.
+  padding 0
+  # Change separator strings.
+  separator_symbol "."
+  # Use same font as i3 but Regular.
+  font pango:CaskaydiaCove Nerd Font Mono,CaskaydiaCove NFM:style=Regular 16
+  colors {
+    # Target           # Border # Background # Text
+    background         #eff1f5
+    statusline         #4c4f69
+    focused_statusline #4c4f69
+    focused_separator  #eff1f5
+    focused_workspace  #eff1f5  #8839ef      #dce0e8
+    active_workspace   #eff1f5  #acb0be      #4c4f69
+    inactive_workspace #eff1f5  #eff1f5      #4c4f69
+    urgent_workspace   #eff1f5  #d20f39      #dce0e8
+  }
+}
