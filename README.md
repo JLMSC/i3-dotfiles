@@ -2,7 +2,7 @@
 My i3wm custom dotfiles.
 
 ## About
-These are being used at least once in the `config`:
+These are being used at least once in the `config`, includes utilities too:
 ```
 - CaskaydiaCove
 - dmenu
@@ -14,6 +14,11 @@ These are being used at least once in the `config`:
 - pavucontrol
 - i3bar
 - i3status
+- xinput
+- xrandr
+- xset
+- feh
+- xsel
 ```
 
 ## i3status
