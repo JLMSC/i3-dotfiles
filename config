@@ -35,6 +35,10 @@ exec --no-startup-id pulseaudio --daemonize=no --exit-idle-time=-1
 # (See pactl)
 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ 30%
 
+# Set custom wallpaper.
+# (See feh)
+exec --no-startup-id feh --bg-fill ~/.config/i3/wallpaper.png
+
 ###################
 #                 #
 # CUSTOM SETTINGS #
@@ -78,7 +82,7 @@ bindsym $mod+c kill
 
 # Start dmenu.
 # (Program launcher)
-bindsym $mod+d exec --no-startup-id dmenu_run
+bindsym $mod+d exec --no-startup-id dmenu_run -b -i -l 5 -p Exec -fn "CaskaydiaCove Nerd Font Mono" -nb "#eff1f5" -nf "#4c4f69" -sb "#8839ef" -sf "#eff1f5"
 
 # Start alacritty.
 # (Terminal)
