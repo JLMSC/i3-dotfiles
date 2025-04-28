@@ -21,7 +21,7 @@ exec --no-startup-id xrandr --output DP-0 --mode 2560x1080 --rate 74.99 --primar
 
 # Set mouse profile, disable Accel.
 # (See xinput)
-exec --no-startup-id xinput set-prop "HP, Inc HyperX Pulsefire Haste 2 Wireless" "libinput Accel Profile Enabled" 0 1 0
+exec --no-startup-id xinput set-prop "HP, Inc HyperX Pulsefire Haste 2 Wireless" "libinput Accel Profile Enabled" 0 1
 
 # Disable X11 screensaver and power management.
 # (See xset)
