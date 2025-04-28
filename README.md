@@ -1,7 +1,7 @@
 # i3-dotfiles
 My i3wm custom dotfiles.
 
-## About
+## Dependencies 
 These are being used at least once in the `config`, includes utilities too:
 ```
 - CaskaydiaCove
