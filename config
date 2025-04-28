@@ -153,6 +153,7 @@ for_window [class="Alacritty"] floating enable, move position center
 # Enable floating for pavucontrol, open at center.
 # (PulseAudio volume control)
 for_window [class="pavucontrol"] floating enable, move position center
+for_window [class="Pavucontrol"] floating enable, move position center
 
 # Move steam to workspace 2.
 # (Game store)
