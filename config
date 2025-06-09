@@ -88,9 +88,9 @@ bindsym $mod+d exec --no-startup-id dmenu_run -b -i -l 5 -p Exec -fn "CaskaydiaC
 # (Terminal)
 bindsym $mod+q exec --no-startup-id alacritty
 
-# Start ranger.
+# Start nemo.
 # (File manager)
-bindsym $mod+z exec --no-startup-id alacritty -e ranger
+bindsym $mod+z exec --no-startup-id nemo
 
 # Start scrot.
 # (Screenshot)
@@ -149,6 +149,9 @@ for_window [class="^.*"] border pixel 2
 # Enable floating for alacritty, open at center.
 # (Terminal)
 for_window [class="Alacritty"] floating enable, move position center
+
+# Enable floating for nemo, open at center.
+for_window [class="Nemo"] floating enable, move position center
 
 # Enable floating for pavucontrol, open at center.
 # (PulseAudio volume control)
