@@ -8,7 +8,7 @@ These are being used at least once in the `config`, includes utilities too:
 - dmenu
 - alacritty
 - pulseaudio
-- ranger
+- Qalculate!
 - scrot
 - steam
 - pavucontrol
