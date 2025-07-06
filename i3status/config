@@ -1,5 +1,5 @@
 general {
-  colors = true
+  colors = false
   color_good = "#40a02b"
   color_bad = "#d20f39"
   color_degraded = "#df8e1d"
