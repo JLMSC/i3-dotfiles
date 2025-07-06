@@ -153,6 +153,10 @@ for_window [class="Alacritty"] floating enable, move position center
 # Enable floating for nemo, open at center.
 for_window [class="Nemo"] floating enable, move position center
 
+# Enable floating for qalculate, open at center.
+for_window [class="qalculate"] floating enable, move position center
+for_window [class="Qalculate"] floating enable, move position center
+
 # Enable floating for pavucontrol, open at center.
 # (PulseAudio volume control)
 for_window [class="pavucontrol"] floating enable, move position center
