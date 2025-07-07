@@ -19,6 +19,9 @@ exec --no-startup-id setxkbmap -layout us -variant intl
 # (See xrandr)
 exec --no-startup-id xrandr --output DP-0 --mode 2560x1080 --rate 74.99 --primary
 
+# Set monitor 'DP=2' to 1920x1080@59.94hz
+exec --no-startup-id xrandr --output DP-2 --mode 1920x1080 --rate 59.94 --rotate left --right-of DP-0
+
 # Set mouse profile, disable Accel.
 # (See xinput)
 exec --no-startup-id xinput set-prop "HP, Inc HyperX Pulsefire Haste 2 Wireless" "libinput Accel Profile Enabled" 0 1
@@ -190,6 +193,7 @@ client.background       #eff1f5
 
 # i3status bar.
 bar {
+  output DP-0
   i3bar_command i3bar
   # Disable tray icons.
   tray_output none
