@@ -22,6 +22,9 @@ exec --no-startup-id xrandr --output DP-0 --mode 2560x1080 --rate 74.99 --primar
 # Set monitor 'DP=2' to 1920x1080@59.94hz
 exec --no-startup-id xrandr --output DP-2 --mode 1920x1080 --rate 59.94 --rotate left --right-of DP-0
 
+# Set audio output to 'DP=0'
+exec --no-startup-id pactl set-card-profile alsa_card.pci-0000_01_00.1 output:hdmi-stereo
+
 # Set mouse profile, disable Accel.
 # (See xinput)
 exec --no-startup-id xinput set-prop "HP, Inc HyperX Pulsefire Haste 2 Wireless" "libinput Accel Profile Enabled" 0 1
@@ -129,16 +132,19 @@ bindsym $mod+p move right
 set $ws1 "[Main]"
 set $ws2 "[Libs]"
 set $ws3 "[Extra]"
+set $ws4 "[Snd]"
 
 # Switch between workspaces.
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
 bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
 
 # Move focused window to target workspace.
 bindsym $mod+Ctrl+1 move window to workspace $ws1
 bindsym $mod+Ctrl+2 move window to workspace $ws2
 bindsym $mod+Ctrl+3 move window to workspace $ws3
+bindsym $mod+Ctrl+4 move window to workspace $ws4
 
 ################
 #              #
