@@ -33,5 +33,5 @@ These are being used at least once in the `config`, includes utilities too:
 - [ ] Add bluetooth status on polybar
 - [ ] Add wallpaper
 - [ ] Add notifyd (xfce4)
-- [ ] custom cursor
 - [ ] custom theme
+- [ ] xrandr doesnt recognize monitor after swapping output
