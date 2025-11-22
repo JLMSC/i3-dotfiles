@@ -116,7 +116,7 @@ exec --no-startup-id pulseaudio --daemonize=no --exit-idle-time=-1
 
 # Sets Default Volume
 # (man pactl)
-exec_always --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ 30%
+exec_always --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ 70%
 
 # Sets Audio Output
 # (man pactl)
