@@ -18,12 +18,12 @@ These are being used at least once in the `config`, includes utilities too:
 - xprop
 ```
 
-## Paths
-i3: `~/.config/i3`
-
-Polybar: `~/.config/polybar`
-
-Cursor: `~/.icons/`
+## Configuration File Paths
+- i3: `~/.config/i3`
+- Polybar: `~/.config/polybar`
+- Cursor: `~/.icons/` (`~/.icons/default/index.theme`)
+- Xresources: `~/.Xresources`
+- Profile: `~/.profile`
 
 ## TO DO
 - [ ] Setup picom
