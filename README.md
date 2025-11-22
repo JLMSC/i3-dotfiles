@@ -45,4 +45,5 @@ These are being used at least once in the `i3/config`, includes utilities too:
 - [ ] Lock screen
 - [ ] Clipboard manager + indicator on polybar
 - [ ] OSD for volume and caps lock
+- [ ] Add window rule to pavucontrol
 - [ ] xrandr doesnt recognize monitor after changing output
