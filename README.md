@@ -19,11 +19,13 @@ These are being used at least once in the `config`, includes utilities too:
 ```
 
 ## Configuration File Paths
-- i3: `~/.config/i3`
-- Polybar: `~/.config/polybar`
+- i3: `~/.config/i3/`
+- Polybar: `~/.config/polybar/`
 - Cursor: `~/.icons/` (`~/.icons/default/index.theme`)
+- Themes: `~/.themes/`
 - Xresources: `~/.Xresources`
 - Profile: `~/.profile`
+- GTK: `~/.config/gtk-3.0/`
 
 ## TO DO
 - [ ] Setup picom
@@ -34,5 +36,4 @@ These are being used at least once in the `config`, includes utilities too:
 - [ ] Add bluetooth status on polybar
 - [ ] Add wallpaper
 - [ ] Add notifyd (xfce4)
-- [ ] custom theme (gtk3, change color accent)
 - [ ] xrandr doesnt recognize monitor after swapping output
