@@ -4,29 +4,20 @@ My i3wm custom dotfiles.
 ## Dependencies 
 These are being used at least once in the `config`, includes utilities too:
 ```
-- CaskaydiaCove
+- CaskaydiaCove Nerd Font Mono
 - dmenu
 - alacritty
+- thunar
+- mate-system-monitor
 - pulseaudio
-- Qalculate!
-- scrot
-- steam
 - pavucontrol
-- i3bar
-- i3status
 - xinput
 - xrandr
-- xset
 - feh
-- xsel
 - xprop
 ```
 
-## i3status
-No need to move `i3status/config` to `~/.config/i3status/`, it reads from `~/.config/i3/i3status/config`
+## Paths
+i3: `~/.config/i3`
 
-## Colorscheme
-Using [catppuccin-latte](https://github.com/catppuccin/i3)
-
-## Wallpaper
-Using [debian-black-4k](https://github.com/zhichaoh/catppuccin-wallpapers)
+Polybar: `~/.config/polybar`
