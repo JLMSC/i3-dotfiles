@@ -27,5 +27,6 @@ Polybar: `~/.config/polybar`
 - [ ] Setup picom
 - [ ] Add round borders
 - [ ] Add filesystem info on polybar
+- [ ] Add bluetooth status on polybar
 - [ ] Add wallpaper
 - [ ] Add notifyd (xfce4)
