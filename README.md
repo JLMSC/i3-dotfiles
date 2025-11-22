@@ -29,9 +29,10 @@ These are being used at least once in the `config`, includes utilities too:
 - [ ] Setup picom
 - [ ] setup terminal emulator fallback (thunar)
 - [ ] Add round borders
+- [ ] Add transparency to terminal
 - [ ] Add filesystem info on polybar
 - [ ] Add bluetooth status on polybar
 - [ ] Add wallpaper
 - [ ] Add notifyd (xfce4)
-- [ ] custom theme
+- [ ] custom theme (gtk3, change color accent)
 - [ ] xrandr doesnt recognize monitor after swapping output
