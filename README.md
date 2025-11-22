@@ -23,7 +23,6 @@ i3: `~/.config/i3`
 Polybar: `~/.config/polybar`
 
 ## TO DO
-- [ ] Add binsym for mousepad
 - [ ] Setup picom
 - [ ] Add round borders
 - [ ] Add filesystem info on polybar
