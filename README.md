@@ -48,4 +48,5 @@ These are being used at least once in the `i3/config`, includes utilities too:
 - [ ] Add window rule to pavucontrol
 - [ ] Add window rule to anydesk
 - [ ] ADd window rule to vscode
+- [ ] Add vscode settings
 - [ ] xrandr doesnt recognize monitor after changing output
