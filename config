@@ -86,6 +86,9 @@ bindsym $mod+f exec --no-startup-id thunar
 # Start Mate System Monitor
 bindsym $mod+z exec --no-startup-id mate-system-monitor
 
+# Start Mousepad
+bindsym $mod+a exec --no-startup-id mousepad
+
 #################################
 # FONT FAMILY, STYLE AND HEIGHT #
 #################################
@@ -174,3 +177,6 @@ for_window [class="Thunar"] floating enable, move position center, resize set 10
 
 # Enable Floating Window For Mate System Monitor, Opens At Center, 1080 600
 for_window [class="Mate-system-monitor"] floating enable, move position center, resize set 1080 600
+
+# Enable Floating Window For Mousepad, Opens At Centar, 800 600
+for_window [class="Mousepad"] floating enable, move position center, resize set 800 600
