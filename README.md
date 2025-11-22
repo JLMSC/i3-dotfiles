@@ -29,11 +29,18 @@ These are being used at least once in the `i3/config`, includes utilities too:
 
 ## TO DO
 - [ ] Setup picom
+- [ ] Setup conky
+- [ ] Add dock?
 - [ ] setup terminal emulator fallback (thunar)
 - [ ] Add round borders
 - [ ] Add transparency to terminal
 - [ ] Add filesystem info on polybar
 - [ ] Add bluetooth status on polybar
-- [ ] Add wallpaper
+- [ ] Add CPU/GPU/RAM info on polybar/conky
+- [ ] Change workspace names to icons (i3)
+- [ ] Add wallpaper (feh)
 - [ ] Add notifyd (xfce4)
-- [ ] xrandr doesnt recognize monitor after swapping output
+- [ ] Add custom icons (gtk)
+- [ ] Lock screen
+- [ ] Clipboard manager + indicator on polybar
+- [ ] xrandr doesnt recognize monitor after changing output
