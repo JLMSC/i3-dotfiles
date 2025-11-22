@@ -142,6 +142,9 @@ exec_always --no-startup-id bash -c 'sleep 0.3 && polybar top --quiet --reload'
 # Sets Wallpapers
 exec --no-startup-id feh --bg-fill ~/.config/i3/wallpaper.jpg
 
+# Sets Themes
+exec --no-startup-id xrdb -merge ~/.Xresources
+
 ###################
 # CUSTOM SETTINGS #
 ###################
