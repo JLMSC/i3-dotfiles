@@ -135,7 +135,9 @@ exec_always --no-startup-id xset -dpms
 exec_always --no-startup-id xset s noblank
 
 # Enables Polybar
-exec_always --no-startup-id pkill -x polybar; polybar bottom --quiet --reload; sleep 2; polybar top --quiet --reload &
+exec_always --no-startup-id pkill -9 -x polybar
+exec_always --no-startup-id bash -c 'sleep 0.3 && polybar bottom --quiet --reload'
+exec_always --no-startup-id bash -c 'sleep 0.3 && polybar top --quiet --reload'
 
 # Sets Wallpapers
 exec --no-startup-id feh --bg-fill ~/.config/i3/wallpaper.jpg
