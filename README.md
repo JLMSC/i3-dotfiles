@@ -9,6 +9,7 @@ These are being used at least once in the `config`, includes utilities too:
 - alacritty
 - thunar
 - mate-system-monitor
+- mousepad
 - pulseaudio
 - pavucontrol
 - xinput
