@@ -35,6 +35,7 @@ These are being used at least once in the `i3/config`, includes utilities too:
 - [ ] Add round borders
 - [ ] Add transparency to terminal
 - [ ] Add filesystem info on polybar
+- [ ] Add caps lock indicator on polybar
 - [ ] Add bluetooth status on polybar
 - [ ] Add CPU/GPU/RAM info on polybar/conky
 - [ ] Change workspace names to icons (i3)
@@ -43,4 +44,5 @@ These are being used at least once in the `i3/config`, includes utilities too:
 - [ ] Add custom icons (gtk)
 - [ ] Lock screen
 - [ ] Clipboard manager + indicator on polybar
+- [ ] OSD for volume and caps lock
 - [ ] xrandr doesnt recognize monitor after changing output
