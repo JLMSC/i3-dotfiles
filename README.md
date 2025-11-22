@@ -30,3 +30,5 @@ Polybar: `~/.config/polybar`
 - [ ] Add bluetooth status on polybar
 - [ ] Add wallpaper
 - [ ] Add notifyd (xfce4)
+- [ ] custom cursor
+- [ ] custom theme
