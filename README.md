@@ -46,4 +46,6 @@ These are being used at least once in the `i3/config`, includes utilities too:
 - [ ] Clipboard manager + indicator on polybar
 - [ ] OSD for volume and caps lock
 - [ ] Add window rule to pavucontrol
+- [ ] Add window rule to anydesk
+- [ ] ADd window rule to vscode
 - [ ] xrandr doesnt recognize monitor after changing output
