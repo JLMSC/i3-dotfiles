@@ -1,8 +1,8 @@
-# i3-dotfiles
-My i3wm custom dotfiles.
+# dotfiles
+My dotfiles
 
 ## Dependencies 
-These are being used at least once in the `config`, includes utilities too:
+These are being used at least once in the `i3/config`, includes utilities too:
 ```
 - CaskaydiaCove Nerd Font Mono
 - dmenu
