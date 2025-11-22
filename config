@@ -1,0 +1,176 @@
+################################
+# DEFAULT KEYS AND KEYBINDINGS #
+###############################
+
+# Sets Mod Key (Mod4=<Super>)
+set $mod Mod4
+
+# Reload i3wm Configuration File
+bindsym $mod+Shift+c reload
+
+# Restart i3wm Inplace
+bindsym $mod+Shift+r restart
+
+# Toggle Tilling/Floating Windows
+bindsym $mod+v floating toggle
+
+# Kill Focused Window
+bindsym $mod+c kill
+
+# Change Container Layout: Tabbed, Stacked, Split
+bindsym $mod+w layout tabbed
+bindsym $mod+s layout stacked
+bindsym $mod+e layout toggle split
+
+# Change Window Focus
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
+# Move Focused Window
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+
+# Change Workspace Names
+set $ws1 "I"
+set $ws2 "II"
+set $ws3 "III"
+set $ws4 "IV"
+set $ws5 "V"
+
+# Force Workspace Start In DP-2/DP-3
+workspace $ws1 output DP-2
+workspace $ws2 output DP-2
+workspace $ws3 output DP-2
+workspace $ws4 output DP-2
+workspace $ws5 output DP-3
+
+# Switch Between Workspaces
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+
+# Move Focused Window To Target Workspace
+bindsym $mod+Ctrl+1 move window to workspace $ws1
+bindsym $mod+Ctrl+2 move window to workspace $ws2
+bindsym $mod+Ctrl+3 move window to workspace $ws3
+bindsym $mod+Ctrl+4 move window to workspace $ws4
+bindsym $mod+Ctrl+5 move window to workspace $ws5
+
+# Increase Volume By 5%
+# (man pactl)
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
+
+# Decrease Volume By 5%
+# (man pactl)
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
+
+# Mute/Unmute Volume
+# (man pactl)
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+# Start Alacritty
+bindsym $mod+q exec --no-startup-id alacritty
+
+# Start Dmenu
+bindsym $mod+d exec --no-startup-id dmenu_run -b -i -l 5 -fn 'CaskaydiaCove Nerd Font Mono'
+
+# Start Thunder
+bindsym $mod+f exec --no-startup-id thunar
+
+# Start Mate System Monitor
+bindsym $mod+z exec --no-startup-id mate-system-monitor
+
+#################################
+# FONT FAMILY, STYLE AND HEIGHT #
+#################################
+
+# Sets Font, Style and Height.
+font pango:CaskaydiaCove Nerd Font Mono,CaskaydiaCove NFM:style=Bold 16
+
+##############
+# AUTO EXECS #
+##############
+
+# Sets Keyboard layout.
+# (man setxkbmap)
+# exec --no-startup-id setxkbmap -layout us -variant -intl
+exec --no-startup-id setxkbmap -layout br -variant abnt2
+
+# Sets Stacked Dual Monitors
+# (man xrandr)
+exec_always --no-startup-id xrandr --output DP-2 --mode 2560x1080 --rate 74.99 --primary --pos 0x1080 --output DP-3 --mode 1920x1080 --rate 60.00 --pos 320x0
+
+
+# Starts PulseAudio, Disables Exit When Inactive.
+# (man pulseaudio)
+exec --no-startup-id pulseaudio --daemonize=no --exit-idle-time=-1
+
+# Sets Default Volume
+# (man pactl)
+exec_always --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ 30%
+
+# Sets Audio Output
+# (man pactl)
+exec_always --no-startup-id pactl set-card-profile alsa_card.pci-0000_01_00.1 output:hdmi-stereo
+
+# Sets Mouse Profile
+# (man xinput)
+exec_always --no-startup-id bash -c 'for id in $(xinput list | grep -i "HP, Inc HyperX Pulsefire Haste 2 Wireless" | awk "{print \$10}" | sed "s/id=//"); do xinput set-prop $id "libinput Accel Profile Enabled" 0 1 0; done'
+
+#exec --no-startup-id xinput set-prop "HP, Inc HyperX Pulsefire Haste 2 Wireless" "libinput Accel Profile Enabled" 0 1
+
+# Disables X11 Screensaver, Power Management and Blanking
+# (man xset)
+exec_always --no-startup-id xset s off
+exec_always --no-startup-id xset -dpms
+exec_always --no-startup-id xset s noblank
+
+# Enables Polybar
+exec_always --no-startup-id pkill -x polybar; polybar bottom --quiet --reload; sleep 2; polybar top --quiet --reload &
+
+# Sets Wallpapers
+exec --no-startup-id feh --bg-fill ~/.config/i3/wallpaper.jpg
+
+###################
+# CUSTOM SETTINGS #
+###################
+
+# Configure Border Style
+default_border pixel 1
+default_floating_border normal
+
+# Enable Mouse+$mod To Drag Floating Window
+floating_modifier $mod
+
+# Center-Align Window's Titles
+title_align center
+
+# Prevent PopUp When In Fullscreen
+popup_during_fullscreen smart
+
+# Sets Inner/Outer Gaps
+gaps inner 5px
+gaps outer 5px
+
+################
+# WINDOW RULES #
+################
+# (man xprop)
+
+# Disable Window's Title
+for_window [class="^.*"] border pixel 2
+
+# Enables Floating Window For Alacritty, Opens At Center, 1080 600
+for_window [class="Alacritty"] floating enable, move position center, resize set 1080 600
+
+# Enable Floating Window For Thunar, Opens At Center, 1080 600
+for_window [class="Thunar"] floating enable, move position center, resize set 1080 600
+
+# Enable Floating Window For Mate System Monitor, Opens At Center, 1080 600
+for_window [class="Mate-system-monitor"] floating enable, move position center, resize set 1080 600
