@@ -26,14 +26,12 @@ These are being used at least once in the `i3/config`, includes utilities too:
 - Xresources: `~/.Xresources`
 - Profile: `~/.profile`
 - GTK: `~/.config/gtk-3.0/`
+- Picom: `~/.config/picom/`
 
 ## TO DO
-- [ ] Setup picom
 - [ ] Setup conky
 - [ ] Add dock?
 - [ ] setup terminal emulator fallback (thunar)
-- [ ] Add round borders
-- [ ] Add transparency to terminal
 - [ ] Add filesystem info on polybar
 - [ ] Add caps lock indicator on polybar
 - [ ] Add bluetooth status on polybar
