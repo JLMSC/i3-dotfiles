@@ -28,23 +28,27 @@ These are being used at least once in the `i3/config`, includes utilities too:
 - GTK: `~/.config/gtk-3.0/`
 - Picom: `~/.config/picom/`
 
+## Custom Actions (Thunar)
+- Open Terminal Here: `alacritty --working-directory %f` (Appearance Conditions: `Directories **`)
+
+## Observations (Known Bugs)
+- There is no automatic detection for monitors, need to define it in the configurations files that uses them.
+- A monitor won't recover its image if changing their source from A -> B -> A, need to turn restart it.
+- Missing characters for other languages such as kr, jp ...
+
 ## TO DO
 - [ ] Setup conky
 - [ ] Add dock?
-- [ ] setup terminal emulator fallback (thunar)
 - [ ] Add filesystem info on polybar
 - [ ] Add caps lock indicator on polybar
 - [ ] Add bluetooth status on polybar
 - [ ] Add CPU/GPU/RAM info on polybar/conky
-- [ ] Change workspace names to icons (i3)
-- [ ] Add wallpaper (feh)
+- [ ] Change workspace names to icons (i3) or something better looking
 - [ ] Add notifyd (xfce4)
 - [ ] Add custom icons (gtk)
 - [ ] Lock screen
+- [ ] Add window title at left most side of polybar.
+- [ ] Change i3 accent color to match GTK theme.
 - [ ] Clipboard manager + indicator on polybar
 - [ ] OSD for volume and caps lock
-- [ ] Add window rule to pavucontrol
-- [ ] Add window rule to anydesk
-- [ ] ADd window rule to vscode
 - [ ] Add vscode settings
-- [ ] xrandr doesnt recognize monitor after changing output
