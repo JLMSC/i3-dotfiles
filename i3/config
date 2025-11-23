@@ -41,12 +41,16 @@ set $ws3 "III"
 set $ws4 "IV"
 set $ws5 "V"
 
-# Force Workspace Start In DP-2/DP-3
-workspace $ws1 output DP-2
-workspace $ws2 output DP-2
-workspace $ws3 output DP-2
-workspace $ws4 output DP-2
-workspace $ws5 output DP-3
+# Define Monitors
+set $monitor_primary "DP-2"
+set $monitor_secondary "DP-0"
+
+# Force Workspace Start In
+workspace $ws1 output $monitor_primary
+workspace $ws2 output $monitor_primary
+workspace $ws3 output $monitor_primary
+workspace $ws4 output $monitor_primary
+workspace $ws5 output $monitor_secondary
 
 # Switch Between Workspaces
 bindsym $mod+1 workspace $ws1
@@ -107,7 +111,7 @@ exec --no-startup-id setxkbmap -layout br -variant abnt2
 
 # Sets Stacked Dual Monitors
 # (man xrandr)
-exec_always --no-startup-id xrandr --output DP-2 --mode 2560x1080 --rate 74.99 --primary --pos 0x1080 --output DP-3 --mode 1920x1080 --rate 60.00 --pos 320x0
+exec_always --no-startup-id xrandr --output $monitor_primary --mode 2560x1080 --rate 74.99 --primary --pos 0x1080 --output $monitor_secondary --mode 1920x1080 --rate 60.00 --pos 320x0
 
 
 # Starts PulseAudio, Disables Exit When Inactive.
@@ -144,6 +148,9 @@ exec_always --no-startup-id feh --bg-scale ~/.config/i3/wallpaper1.jpg ~/.config
 
 # Sets Themes
 exec --no-startup-id xrdb -merge ~/.Xresources
+
+# Starts Picom
+exec_always --no-startup-id picom
 
 ###################
 # CUSTOM SETTINGS #
