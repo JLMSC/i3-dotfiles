@@ -11,11 +11,16 @@ These are being used at least once in the `i3/config`, includes utilities too:
 - mate-system-monitor
 - mousepad
 - pulseaudio
+- polybar
+- picom
+- pactl
 - pavucontrol
 - xinput
 - xrandr
+- setxkbmap
 - feh
 - xprop
+- xrdb
 ```
 
 ## Configuration File Paths
