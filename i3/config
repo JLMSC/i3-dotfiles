@@ -181,14 +181,20 @@ gaps outer 5px
 # Disable Window's Title
 for_window [class="^.*"] border pixel 2
 
-# Enables Floating Window For Alacritty, Opens At Center, 1080 600
-for_window [class="Alacritty"] floating enable, move position center, resize set 1080 600
+# Enables Floating Window For Alacritty, Opens At Center, 1080 720
+for_window [class="Alacritty"] floating enable, move position center, resize set 1080 720
 
-# Enable Floating Window For Thunar, Opens At Center, 1080 600
-for_window [class="Thunar"] floating enable, move position center, resize set 1080 600
+# Enable Floating Window For Thunar, Opens At Center, 1080 720
+for_window [class="Thunar"] floating enable, move position center, resize set 1080 720
 
-# Enable Floating Window For Mate System Monitor, Opens At Center, 1080 600
-for_window [class="Mate-system-monitor"] floating enable, move position center, resize set 1080 600
+# Enable Floating Window For Mate System Monitor, Opens At Center, 1080 720
+for_window [class="Mate-system-monitor"] floating enable, move position center, resize set 1080 720
 
-# Enable Floating Window For Mousepad, Opens At Centar, 800 600
+# Enable Floating Window For Mousepad, Opens At Center, 800 600
 for_window [class="Mousepad"] floating enable, move position center, resize set 800 600
+
+# Enable Floating Window For AnyDesk, Opens At Center, 1080 720
+for_window [class="Anydesk"] floating enable, move position center, resize set 1080 720
+
+# Enable Floating Window For Pavucontrol, Opens At Center, 800 600
+for_window [class="pavucontrol"] floating enable, move position center, resize set 800 600
