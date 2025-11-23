@@ -198,3 +198,9 @@ for_window [class="Anydesk"] floating enable, move position center, resize set 1
 
 # Enable Floating Window For Pavucontrol, Opens At Center, 800 600
 for_window [class="pavucontrol"] floating enable, move position center, resize set 800 600
+
+# Enable Floating Window For Steam, Opens At Center, Moves to Workspace 3
+for_window [class="steam"] floating enable, move position center, move to workspace $ws3
+
+# Steam Games, Moves to Workspace 4
+for_window [class="steam_app_*"] move to workspace $ws4
