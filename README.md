@@ -56,4 +56,5 @@ These are being used at least once in the `i3/config`, includes utilities too:
 - [ ] Change i3 accent color to match GTK theme.
 - [ ] Clipboard manager + indicator on polybar
 - [ ] OSD for volume and caps lock
+- [ ] Configure lightdm
 - [ ] Add vscode settings
