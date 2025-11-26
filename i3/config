@@ -107,7 +107,7 @@ font pango:CaskaydiaCove Nerd Font Mono,CaskaydiaCove NFM:style=Bold 16
 # Sets Keyboard layout.
 # (man setxkbmap)
 # exec --no-startup-id setxkbmap -layout us -variant -intl
-exec --no-startup-id setxkbmap -layout br -variant abnt2
+exec_always --no-startup-id setxkbmap -layout br -variant abnt2
 
 # Sets Stacked Dual Monitors
 # (man xrandr)
