@@ -93,6 +93,9 @@ bindsym $mod+z exec --no-startup-id mate-system-monitor
 # Start Mousepad
 bindsym $mod+a exec --no-startup-id mousepad
 
+# Start Scrot
+bindsym $mod+Shift+p --release exec --no-startup-id scrot -s
+
 #################################
 # FONT FAMILY, STYLE AND HEIGHT #
 #################################
@@ -106,7 +109,7 @@ font pango:CaskaydiaCove Nerd Font Mono,CaskaydiaCove NFM:style=Bold 16
 
 # Sets Keyboard layout.
 # (man setxkbmap)
-# exec --no-startup-id setxkbmap -layout us -variant -intl
+#exec_always --no-startup-id setxkbmap -layout us -variant -intl
 exec_always --no-startup-id setxkbmap -layout br -variant abnt2
 
 # Sets Stacked Dual Monitors
