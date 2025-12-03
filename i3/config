@@ -207,3 +207,6 @@ for_window [class="steam"] floating enable, move position center, move to worksp
 
 # Steam Games, Moves to Workspace 4
 for_window [class="steam_app_*"] move to workspace $ws4
+
+# Enable Floating Window for XCalc, Opens At Center
+for_window [class="XCalc"] floating enable, move position center
